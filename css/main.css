@@ -1,0 +1,17 @@
+h1 {
+  font-size: 128px;
+  line-height: 1;
+}
+
+h1, h2, h3, p {
+  color: #1a1a1a;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  background-color: #FFFAF5;
+}
+
+.accent-heading {
+  font-family: "Wildcut";
+}
