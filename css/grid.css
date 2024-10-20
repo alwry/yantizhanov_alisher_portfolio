@@ -124,7 +124,7 @@ img, embed, object, video, picture {
   
      .grid-con { 
         display: grid; 
-        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-template-columns: repeat(6, minmax(0, 1fr));
         grid-column-gap: 30px;
         padding-left: 15px;
         padding-right: 15px;

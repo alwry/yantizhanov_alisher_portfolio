@@ -55,6 +55,11 @@ body {
     margin-top: 10px;
 }
 
+.welcome-text {
+    height: 50px;
+    margin-top: 15px;
+}
+
 .welcome-video {
     height: 230px;
     margin-top: 80px;
@@ -76,6 +81,12 @@ body {
 }
 
 
+.project {
+    display: flex;
+    flex-direction: column;
+}
+
+
 .preview {
     height: 400px;
     margin-top: 40px;
@@ -84,11 +95,25 @@ body {
 .preview-heading {
     height: 20px;
     margin-top: 20px;
+    width: 30%;
+}
+
+.preview-descrpition {
+    width: 65%;
+}
+
+.preview-button {
+    width: 30%;
 }
 
 .preview-descrpition, .preview-button {
     height: 55px;
     margin-top: 15px;
+}
+
+.preview-desc-button {
+    display: flex;
+    justify-content: space-between;
 }
 
 #more-button {
@@ -118,6 +143,17 @@ body {
     margin-bottom: 30px;
     height: 20px;
 }
+
+.boxes {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.body-form-box {
+    width: 48%;
+}
+
 .contact-button {
     height: 50px;
 }
@@ -134,4 +170,70 @@ footer {
 .footer-button {
     margin-top: 20px;
     height: 20px;
+}
+
+.self {
+    display: none;
+}
+
+@media screen and (min-width: 1200px) {
+
+    .burger {
+        display: none;
+    }
+
+    .header-menu {
+        display: flex;
+        flex-direction: row;
+        height: 20px;
+        justify-content: space-between;
+        align-self: center;
+    }
+    .header-button {
+        height: 20px;
+        width: 30%;
+    }
+
+    .welcome-text {
+        align-self: end;
+    }
+
+    .welcome-video {
+        height: 730px;
+        margin-top: 20px;
+    }
+
+    .hailing-text {
+        margin-top: 280px;
+        height: 250px;
+    }
+
+    .hailing-button {
+        margin-bottom: 240px;
+    }
+
+    .h2, .h2-descriptor {
+        padding-left: 60px;
+    }
+    
+    .h2 {
+        margin-bottom: 170px;
+    }
+
+    .self {
+        display: block;
+        height: 70%;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+    #contact {
+        position: relative;
+    }
+
+    .footer-button {
+        margin-top: 0;
+        align-self: end;
+    }
 }
