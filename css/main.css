@@ -15,3 +15,117 @@ body {
 .accent-heading {
   font-family: "Wildcut";
 }
+
+.hidden {
+  display: none;
+}
+
+.box-gray {
+  background-color: #1a1a1a;
+}
+
+.burger {
+  height: 40px;
+  width: 40px;
+  background-color: #1a1a1a;
+}
+
+.burger-box {
+  padding: 30px;
+  padding-top: 50px;
+}
+
+.logo {
+  height: 130px;
+}
+
+.welcome-descriptor {
+  height: 20px;
+  margin-top: 320px;
+}
+
+.welcome-heading {
+  height: 128px;
+  margin-top: 10px;
+}
+
+.welcome-video {
+  height: 230px;
+  margin-top: 80px;
+}
+
+.hailing-text {
+  height: 140px;
+  margin-top: 320px;
+}
+
+.hailing-button {
+  height: 15px;
+  margin-top: 5px;
+  margin-bottom: 320px;
+}
+
+.selected-heading {
+  height: 24px;
+}
+
+.preview {
+  height: 400px;
+  margin-top: 40px;
+}
+
+.preview-heading {
+  height: 20px;
+  margin-top: 20px;
+}
+
+.preview-descrpition, .preview-button {
+  height: 55px;
+  margin-top: 15px;
+}
+
+#more-button {
+  height: 30px;
+}
+
+#contact {
+  margin-top: 80px;
+}
+
+.h2-descriptor {
+  height: 15px;
+}
+
+.h2 {
+  margin-top: 10px;
+  height: 24px;
+  margin-bottom: 70px;
+}
+
+.body-l {
+  height: 20px;
+}
+
+.body-form, .body-form-box {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  height: 20px;
+}
+
+.contact-button {
+  height: 50px;
+}
+
+footer {
+  margin-top: 90px;
+  margin-bottom: 30px;
+}
+
+.footer-logo {
+  height: 30px;
+}
+
+.footer-button {
+  margin-top: 20px;
+  height: 20px;
+}
