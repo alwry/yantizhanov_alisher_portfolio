@@ -9,20 +9,41 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
         <link rel="fonts" href="fonts/Wildcut.ttf">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Alisher Portfolio</title>
     </head>
     <body>
         <header>
             <div class="grid-con header">
                 <img src="img/logo-portfolio-02.svg" alt="designer logo" class="col-span-2 logo">
-                <div class="col-start-4 col-span-1 burger-box">
+                <!-- <div class="col-start-4 col-span-1 burger-box">
                     <div class="burger"></div>
                 </div>
-                <div class="m-col-start-4 m-col-end-7 header-menu">
+                <div class="m-col-start-4 m-col-end-7 m-header-menu">
                     <div class="box-gray header-button"></div>
                     <div class="box-gray header-button"></div>
                     <div class="box-gray header-button"></div>
-                </div>
+                </div> -->
+                <nav class="navigation col-start-4 col-span-1 m-col-start-4 m-col-end-7">
+                    <ul class="sidebar" id="desk-hid">
+                        <li>
+                        <a href="#">close menu</a>
+                        </li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Works</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+            
+                    <ul>
+                        <li class="desktop-hidden">
+                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#1a1a1a"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+                            </a>
+                        </li>
+                        <li class="mobile-hidden"><a href="#">About</a></li>
+                        <li class="mobile-hidden"><a href="#">Works</a></li>
+                        <li class="mobile-hidden"><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
         <main>

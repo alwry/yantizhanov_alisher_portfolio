@@ -3,13 +3,87 @@ h1 {
   line-height: 1;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, p, a {
   color: #1a1a1a;
   font-family: "Manrope", sans-serif;
 }
 
 body {
   background-color: #FFFAF5;
+}
+
+.navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation ul {
+  margin-left: auto;
+  margin-top: 0;
+}
+
+.navigation ul li {
+  list-style: none;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.header-sec {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-sec img {
+  height: 22px;
+  width: 96px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  background-color: #1a1a1a;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 20px;
+}
+
+.sidebar.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sidebar li {
+  padding-bottom: 32px;
+  width: 100%;
+}
+
+.sidebar li a {
+  width: 100%;
+}
+
+.mobile-hidden {
+  display: none;
+}
+
+.desktop-hidden {
+  display: flex;
+  margin-top: 30px;
 }
 
 .accent-heading {
@@ -54,8 +128,8 @@ body {
   margin-top: 15px;
 }
 
-.welcome-video {
-  height: 40vh;
+.main-video {
+  width: 100%;
   margin-top: 80px;
 }
 
@@ -169,10 +243,28 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+  .header nav ul {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    justify-content: space-between;
+  }
+  .header nav ul li a {
+    color: #1a1a1a;
+  }
+  .mobile-hidden {
+    display: flex;
+  }
+  .desktop-hidden {
+    display: none;
+  }
+  #desk-hid {
+    display: none;
+  }
   .burger-box {
     display: none;
   }
-  .header-menu {
+  .m-header-menu {
     display: flex;
     flex-direction: row;
     height: 20px;
