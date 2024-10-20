@@ -55,7 +55,7 @@ body {
 }
 
 .welcome-video {
-  height: 230px;
+  height: 40vh;
   margin-top: 80px;
 }
 
@@ -168,8 +168,8 @@ footer {
   display: none;
 }
 
-@media screen and (min-width: 1200px) {
-  .burger {
+@media screen and (min-width: 768px) {
+  .burger-box {
     display: none;
   }
   .header-menu {
@@ -183,6 +183,27 @@ footer {
     height: 20px;
     width: 30%;
   }
+  .welcome-video {
+    height: 500px;
+  }
+  .hailing-text {
+    margin-top: 380px;
+  }
+  .hailing-button {
+    margin-bottom: 340px;
+  }
+  .preview-descrpition {
+    width: 85%;
+  }
+  .preview-button {
+    width: 10%;
+  }
+  .footer-button {
+    margin-top: 0;
+    align-self: end;
+  }
+}
+@media screen and (min-width: 1200px) {
   .welcome-text {
     align-self: end;
   }
@@ -212,9 +233,5 @@ footer {
   }
   #contact {
     position: relative;
-  }
-  .footer-button {
-    margin-top: 0;
-    align-self: end;
   }
 }
