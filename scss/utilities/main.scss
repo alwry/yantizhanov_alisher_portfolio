@@ -3,19 +3,92 @@ $bg-color: #FFFAF5;
 $accent-color: #FF4B00;
 $accent-color-sec: #1C2FFF;
 
-
 h1 {
     font-size: 128px;
     line-height: 1;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, p, a {
     color: $primary-text-color;
     font-family: "Manrope", sans-serif;
 }
 
 body {
     background-color: $bg-color;
+}
+
+.navigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation ul {
+    margin-left: auto;
+    margin-top: 0;
+}
+
+.navigation ul li {
+    list-style: none;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.header-sec {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-sec img {
+    height: 22px;
+    width: 96px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 999;
+    background-color: $primary-text-color;
+    backdrop-filter: blur(50px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 20px;
+}
+
+.sidebar.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebar li {
+    padding-bottom: 32px;
+    width: 100%;
+
+}
+
+.sidebar li a {
+    width: 100%;
+}
+
+.mobile-hidden {
+    display: none;
+}
+
+.desktop-hidden {
+    display: flex;
+    margin-top: 30px;
 }
 
 .accent-heading {
@@ -61,7 +134,7 @@ body {
 }
 
 .main-video {
-    height: 40vh;
+    width: 100%;
     margin-top: 80px;
 }
 
@@ -177,11 +250,35 @@ footer {
 }
 
 @media screen and (min-width: 768px){
+
+    .header nav ul {
+        display: flex;
+        align-items: center;
+        width: 70%;
+        justify-content: space-between;
+    }
+
+    .header nav ul li a {
+        color: $primary-text-color;
+
+    }
+    
+    .mobile-hidden {
+        display: flex;
+    }
+    
+    .desktop-hidden {
+        display: none;
+    }
+    
+    #desk-hid {
+        display: none;
+    }
     .burger-box {
         display: none;
     }
 
-    .header-menu {
+    .m-header-menu {
         display: flex;
         flex-direction: row;
         height: 20px;
