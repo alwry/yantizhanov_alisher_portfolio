@@ -7,3 +7,18 @@ body {
 .hailing {
     margin: 300px 0px;
 }
+
+.welcome-hero {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    justify-content: flex-end;
+}
+
+@media screen and (min-width: 768px) {
+    .welcome-hero {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+}
