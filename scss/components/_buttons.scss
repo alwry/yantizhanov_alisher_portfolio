@@ -1,0 +1,23 @@
+@use '../abstracts' as a;
+
+.cta-button {
+    height: 70px;
+    text-align: left;
+    font-size: 20px;
+    border: 0px;
+    background-color: a.$dark-grey;
+    color: a.$main-white;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-arrow {
+    transform: rotate(45deg);
+    height: 30px;
+}
+
+.cta-button p{
+    line-height: 1;
+}
