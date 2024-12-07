@@ -1,0 +1,26 @@
+@use '../abstracts/' as a;
+
+.heading-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(90deg);
+}
+
+.about {
+    margin-top: 125px;
+    margin-bottom: 55px;
+}
+
+.about-chapter {
+    border-bottom: 1px solid a.$main-grey;
+    margin-top: 30px;
+}
+
+.about-chapter .main-p {
+    margin: 25px 0px 50px 0px;
+}
+
+.experience {
+    margin-bottom: 80px;
+}

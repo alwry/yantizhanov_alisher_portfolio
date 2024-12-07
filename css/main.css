@@ -54,6 +54,34 @@ ul {
   margin-top: 100px;
 }
 
+.page-h2 {
+  font-size: 48px;
+  font-weight: 500;
+  letter-spacing: -3px;
+}
+
+.decorative-h {
+  font-family: "Wildcut";
+  font-size: 36px;
+}
+
+.main-p {
+  font-size: 15px;
+  color: #ababab;
+}
+
+.decorative-p {
+  font-size: 40px;
+  margin-top: 100px;
+  margin-bottom: 25px;
+}
+
+.chapter-h3 {
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 500;
+}
+
 @media screen and (min-width: 768px) {
   .hailing-text {
     font-size: 36px;
@@ -180,6 +208,31 @@ footer {
 
 #footer-div .descriptor {
   margin-bottom: 15px;
+}
+
+.heading-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(90deg);
+}
+
+.about {
+  margin-top: 125px;
+  margin-bottom: 55px;
+}
+
+.about-chapter {
+  border-bottom: 1px solid #ababab;
+  margin-top: 30px;
+}
+
+.about-chapter .main-p {
+  margin: 25px 0px 50px 0px;
+}
+
+.experience {
+  margin-bottom: 80px;
 }
 
 body {
