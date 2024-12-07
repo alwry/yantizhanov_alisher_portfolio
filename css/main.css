@@ -5,8 +5,8 @@ body {
 .welcome-h2 {
   font-size: 120px;
   letter-spacing: -10px;
-  line-height: 1;
-  margin-top: 250px;
+  line-height: 0.8;
+  margin-bottom: 10px;
   color: #FF4B00;
 }
 
@@ -26,6 +26,10 @@ ul {
   text-align: left;
 }
 
+.welcome-text {
+  width: 60%;
+}
+
 .hailing-text {
   font-size: 20px;
   margin-bottom: 25px;
@@ -36,6 +40,12 @@ ul {
   font-weight: 500;
 }
 
+.work-card-text .main-p {
+  width: 60%;
+  color: #ababab;
+  font-weight: 400;
+}
+
 .cta-heading {
   font-size: 60px;
   line-height: 1;
@@ -44,6 +54,31 @@ ul {
   margin-top: 100px;
 }
 
+@media screen and (min-width: 768px) {
+  .hailing-text {
+    font-size: 36px;
+  }
+  .work-card-text .main-p {
+    width: 30%;
+  }
+  .welcome-text {
+    width: 40%;
+  }
+  .work-card-text .main-p {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .welcome-h2 {
+    font-size: 150px;
+  }
+  .welcome-text {
+    width: 30%;
+  }
+  .work-card-text .main-p {
+    width: 40%;
+  }
+}
 #header-logo {
   height: 100px;
 }
@@ -59,6 +94,22 @@ ul {
   width: 40px;
 }
 
+.main-nav-ul {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .main-nav-ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  .main-nav {
+    width: 100%;
+  }
+  #burger {
+    display: none;
+  }
+}
 .welcome-con video {
   width: 100%;
   margin-top: 10px;
@@ -76,12 +127,6 @@ ul {
   color: #ababab;
   margin-top: 25px;
   margin-bottom: 5px;
-}
-
-.work-card-text .main-p {
-  width: 60%;
-  color: #ababab;
-  font-weight: 400;
 }
 
 .work-card-text {
@@ -133,10 +178,29 @@ footer {
   height: 200px;
 }
 
+#footer-div .descriptor {
+  margin-bottom: 15px;
+}
+
 body {
   background-color: #121212;
 }
 
 .hailing {
   margin: 300px 0px;
+}
+
+.welcome-hero {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  justify-content: flex-end;
+}
+
+@media screen and (min-width: 768px) {
+  .welcome-hero {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
 }

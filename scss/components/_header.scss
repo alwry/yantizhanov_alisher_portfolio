@@ -13,3 +13,26 @@
     height: 40px;
     width: 40px;
 }
+
+.main-nav-ul {
+    display: none;
+}
+
+@media screen and (min-width: 768px){
+    .main-nav-ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main-nav {
+        width: 100%;
+    }
+
+    #burger {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+}
