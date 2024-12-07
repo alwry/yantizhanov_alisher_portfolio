@@ -14,137 +14,97 @@
     </head>
     <body>
         <header>
-            <div class="grid-con header">
-                <img src="img/logo-portfolio-02.svg" alt="designer logo" class="col-span-2 logo">
-                <!-- <div class="col-start-4 col-span-1 burger-box">
-                    <div class="burger"></div>
+            <div class="grid-con" id="header-mobile">
+                <div class="col-span-1">
+                    <object data="img/logo-portfolio-02.svg" type="image/svg+xml" id="header-logo"></object>
                 </div>
-                <div class="m-col-start-4 m-col-end-7 m-header-menu">
-                    <div class="box-gray header-button"></div>
-                    <div class="box-gray header-button"></div>
-                    <div class="box-gray header-button"></div>
-                </div> -->
-                <nav class="navigation col-start-4 col-span-1 m-col-start-4 m-col-end-7">
-                    <ul class="sidebar" id="desk-hid">
-                        <li>
-                        <a href="#">close menu</a>
-                        </li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Works</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-            
-                    <ul>
-                        <li class="desktop-hidden">
-                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#1a1a1a"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
-                            </a>
-                        </li>
-                        <li class="mobile-hidden"><a href="#">About</a></li>
-                        <li class="mobile-hidden"><a href="#">Works</a></li>
-                        <li class="mobile-hidden"><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
+                <div class="col-span-1 col-start-4" id="burger-div">
+                    <object data="img/list.svg" type="image/svg+xml" id="burger"></object>
+                </div>
             </div>
         </header>
         <main>
-            <div class="grid-con" id="welcome">
-                <div class="col-start-2 col-span-2 m-col-start-3 l-col-start-1 l-col-span-1 welcome-descriptor box-gray"></div>
-                <div class="col-span-full m-col-start-2 m-col-span-4 l-col-start-1 l-col-span-2 welcome-heading box-gray"></div>
-                <div class="col-span-full m-col-start-2 m-col-span-4 l-col-start-5 welcome-text box-gray"></div>
-            </div>
-            <video controls preload="metadata" poster="img/poster-styleframe.jpg" class="main-video">
-                <source src="video/video.mp4" type="video/mp4">
-                <source src="video/video.webm" type="video/webm">
-            <p>Your browser does not support the video tag</p>
-            </video>
-            <div class="grid-con" id="hailing">
-                <div class="col-span-full l-col-span-5 hailing-text box-gray"></div>
-                <div class="col-span-2 l-col-start-1 l-col-span-1 hailing-button box-gray"></div>
-            </div>
-            <div id="selected">
+            <section class="welcome-con">
+                <div class="grid-con" id="welcome">
+                    <h2 class="welcome-h2 col-span-full">
+                        alisher
+                    </h2>
+                    <p class="welcome-text col-span-full">
+                        Based in London, Ontario, I create designs that forge meaningful connections by exploring novel ways to interact with people's emotions and experiences.
+                    </p>
+                </div>
+                <video src="video/" controls autoplay></video>
+            </section>
+
+            <section class="hailing">
                 <div class="grid-con">
-                    <div class="col-span-2 selected-heading box-gray"></div>
+                    <div class="col-span-full">
+                        <p class="hailing-text">
+                            Hailing from Kazakhstan and currently based in Canada, I'm a versatile designer passionate about crafting exceptional user interfaces and innovative product designs.
+                        </p>
+                    </div>
+                    <div class="col-span-2">
+                        <a href="about.html" class="more-link"><p>More about me</p></a>
+                    </div>
                 </div>
-                
-                <div class="grid-con work">
-                    <div class="col-span-full l-col-span-4 project">
-                        <div class="box-gray preview"></div>
-                        <div class="box-gray preview-heading"></div>
-                        <div class="preview-desc-button">
-                            <div class="box-gray preview-descrpition"></div>
-                            <div class="box-gray preview-button"></div>
+            </section>
+
+            <section class="works">
+                <div class="grid-con" id="works-con">
+                    <h2 class="works-h2 col-span-2">Selected works</h2>
+                    <div class="work-card col-span-full">
+                        <img src="img/jibek-preview.jpg" alt="Jibek case study preview">
+                        
+                        <p class="descriptor">August 2022</p>
+                        <h3 class="card-heading">Jibek – Exploring Almaty</h3>
+                        <div class="work-card-text">
+                            <p class="main-p">A mobile app that becomes every traveler's best friend</p>
+                            <object data="img/arrow.svg" type="image/svg+xml"></object>
                         </div>
                     </div>
 
-                    <div class="col-span-full l-col-span-2 project">
-                        <div class="box-gray preview"></div>
-                        <div class="box-gray preview-heading"></div>
-                        <div class="preview-desc-button">
-                            <div class="box-gray preview-descrpition"></div>
-                            <div class="box-gray preview-button"></div>
+                    <div class="work-card col-span-full">
+                        <img src="img/jibek-preview.jpg" alt="Jibek case study preview">
+                        
+                        <p class="descriptor">November 2022</p>
+                        <h3 class="card-heading">Design3D – Interior Design Studio</h3>
+                        <div class="work-card-text">
+                            <p class="main-p">Web UI/UX design for a leading interior design studio</p>
+                            <object data="img/arrow.svg" type="image/svg+xml"></object>
                         </div>
                     </div>
 
-                    <div class="col-span-full l-col-span-3 project">
-                        <div class="box-gray preview"></div>
-                        <div class="box-gray preview-heading"></div>
-                        <div class="preview-desc-button">
-                            <div class="box-gray preview-descrpition"></div>
-                            <div class="box-gray preview-button"></div>
-                        </div>
-                    </div>
-
-                    <div class="col-span-full l-col-span-3 project">
-                        <div class="box-gray preview"></div>
-                        <div class="box-gray preview-heading"></div>
-                        <div class="preview-desc-button">
-                            <div class="box-gray preview-descrpition"></div>
-                            <div class="box-gray preview-button"></div>
+                    <div class="work-card col-span-full">
+                        <img src="img/jibek-preview.jpg" alt="Jibek case study preview">
+                        
+                        <p class="descriptor">August 2022</p>
+                        <h3 class="card-heading">Orbitz – Redesign</h3>
+                        <div class="work-card-text">
+                            <p class="main-p">Reincarnation of a soft drink brand</p>
+                            <object data="img/arrow.svg" type="image/svg+xml"></object>
                         </div>
                     </div>
                 </div>
+            </section>
 
-
-                <div class="grid-con" id="more-button">
-                    <div class="col-span-2 l-col-span-1 hailing-button box-gray"></div>
-                </div>
-            </div>
-
-            <div class="grid-con" id="contact">
-                <div class="col-span-1 l-col-start-3 l-col-span-2 box-gray h2-descriptor"></div>
-                <div class="col-start-1 col-span-2 l-col-start-3 l-col-span-2 box-gray h2"></div>
-
-                <div class="col-start-1 col-span-2 m-col-start-2 l-col-start-2 l-col-span-1 box-gray body-l"></div>
-                <div class="col-span-full m-col-start-2 m-col-span-4 l-col-start-2 l-col-span-2 box-gray body-form"></div>
-
-                <div class="col-start-1 col-span-2 m-col-start-2 l-col-start-2 l-col-span-1 box-gray body-l"></div>
-                <div class="col-span-full m-col-start-2 m-col-span-4 l-col-start-2 l-col-span-2 box-gray body-form"></div>
-
-                <div class="col-start-1 col-span-2 m-col-start-2 l-col-start-2 l-col-span-1 box-gray body-l"></div>
-                <div class="col-start-1 col-span-2 m-col-start-2 m-col-span-2 l-col-start-2 l-col-span-1 boxes">
-                    <div class="box-gray body-form-box"></div>
-                    <div class="box-gray body-form-box"></div>
-                </div>
-                <div class="col-start-3 col-span-2 m-col-start-4 m-col-span-2 l-col-start-3 l-col-span-1 boxes">
-                    <div class="box-gray body-form-box"></div>
-                    <div class="box-gray body-form-box"></div>
-                </div>
-
-
-                <div class="col-start-1 col-span-2 m-col-start-2 l-col-start-2 l-col-span-1 box-gray body-l"></div>
-                <div class="col-span-full m-col-start-2 m-col-span-4 l-col-start-2 l-col-span-2 box-gray body-form"></div>
-
-                <div class="col-span-full m-col-span-4 m-col-start-2 l-col-start-2 l-col-span-2 box-gray contact-button"></div>
-                <div class="l-col-start-4 l-col-span-2 self box-gray"></div>
-            </div>
+            <section class="grid-con" id="cta-con">
+                <h2 class="cta-heading col-span-full">
+                    Let's work together!
+                </h2>
+                <button class="cta-button col-span-full"><p>Click!</p><object data="img/arrow.svg" type="image/svg+xml" class="button-arrow"></object></button>
+            </section>
         </main>
         <footer>
-            <div class="grid-con" id="footer">
-                <div class="col-start-2 col-span-2 m-col-start-1 m-col-span-1 box-gray footer-logo"></div>
-                <div class="col-start-1 col-span-1 m-col-start-3 box-gray footer-button"></div>
-                <div class="col-span-1 box-gray footer-button"></div>
-                <div class="col-span-1 box-gray footer-button"></div>
-                <div class="col-span-1 box-gray footer-button"></div>
+            <div class="grid-con" id="footer-div">
+                
+                <ul class="col-span-1 col-start-1">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="about.html">Contact</a></li>
+                </ul>
+                <object data="img/logo-portfolio-02.svg" type="image/svg+xml" class="footer-log col-start-3 col-span-2"></object>
+                <p class="descriptor col-span-full">
+                    Alisher Yantizhanov 2024. All rights reserved
+                </p>
             </div>
         </footer>
     </body>

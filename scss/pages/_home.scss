@@ -1,0 +1,9 @@
+@use '../abstracts/' as a;
+
+body {
+    background-color: a.$main-bg;
+}
+
+.hailing {
+    margin: 300px 0px;
+}

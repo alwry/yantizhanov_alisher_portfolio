@@ -1,0 +1,47 @@
+@use '../abstracts/' as a;
+
+body {
+    font-family: 'Manrope', Arial, sans-serif;
+}
+
+.welcome-h2 {
+    font-size: 120px;
+    letter-spacing: -10px;
+    line-height: 1;
+    margin-top: 250px;
+    color: a.$main-color;
+}
+
+a, p, h1, h2, h3, li {
+    color: a.$main-white;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+}
+
+.welcome-text, .more-link p {
+    font-weight: 300;
+    font-size: 12px;
+    text-align: left;
+}
+
+.hailing-text {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.works-h2 {
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.cta-heading {
+    font-size: 60px;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 150px;
+    margin-top: 100px;
+}
