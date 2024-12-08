@@ -10,6 +10,10 @@ body {
   color: #FF4B00;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 a, p, h1, h2, h3, li {
   color: #fafafa;
   list-style-type: none;
@@ -143,6 +147,10 @@ ul {
   display: none;
 }
 
+#header-mobile a {
+  height: 300%;
+}
+
 @media screen and (min-width: 768px) {
   .main-nav-ul {
     display: flex;
@@ -248,6 +256,14 @@ footer {
 
 #footer-div .descriptor {
   margin-bottom: 15px;
+}
+
+:root {
+  --plyr-color-main: #FF4B00;
+  --plyr-control-icon-size: 15px;
+  --plyr-control-radius: 20px;
+  --plyr-font-family: v.$body-font-family;
+  --plyr-control-spacing: 15px;
 }
 
 .about .main-p {

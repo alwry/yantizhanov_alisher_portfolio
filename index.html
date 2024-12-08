@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
         <link rel="fonts" href="fonts/Wildcut.ttf">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Alisher Portfolio</title>
@@ -22,8 +23,9 @@
                     <object data="img/list.svg" type="image/svg+xml" id="burger"></object>
                     <nav class="main-nav">
                         <ul class="main-nav-ul">
-                            <li>About</li>
-                            <li>Contact</li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -41,14 +43,14 @@
                         </p>
                     </div>
                 </div>
-                <video controls autoplay>
+                <video controls class="player">
                     <source src="video/demo-reel.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
             </section>
 
             <section class="hailing">
-                <div class="grid-con">
+                <div class="grid-con" id="hailing-con">
                     <div class="col-span-full">
                         <p class="hailing-text">
                             Hailing from Kazakhstan and currently based in Canada, I'm a versatile designer passionate about crafting exceptional user interfaces and innovative product designs.
@@ -109,8 +111,9 @@
             <div class="grid-con" id="footer-div">
                 
                 <ul class="col-span-1 col-start-1">
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="about.html">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
                 <object data="img/logo-portfolio-02.svg" type="image/svg+xml" class="footer-log col-start-4 col-span-2 t-col-start-6 t-col-span-3 l-col-start-11 l-col-end-13"></object>
                 <p class="descriptor col-span-full">
@@ -118,7 +121,25 @@
                 </p>
             </div>
         </footer>
-    </body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
+    <script>
+        const lenis = new Lenis()
+        lenis.on('scroll', (e) => {
+            console.log(e)
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+        
+    </script>
     <script src="js/main.js"></script>
+    </body>
+    
 </html>
