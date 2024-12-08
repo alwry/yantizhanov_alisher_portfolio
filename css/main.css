@@ -82,6 +82,11 @@ ul {
   font-weight: 500;
 }
 
+.form-heading-h3 {
+  font-size: 20px;
+  font-weight: 300;
+}
+
 @media screen and (min-width: 768px) {
   .hailing-text {
     font-size: 36px;
@@ -94,6 +99,18 @@ ul {
   }
   .work-card-text .main-p {
     width: 40%;
+  }
+  .page-h2 {
+    font-size: 110px;
+    font-weight: 500;
+    letter-spacing: -3px;
+  }
+  .decorative-h {
+    font-size: 40px;
+  }
+  .decorative-p {
+    font-size: 90px;
+    margin-left: -10px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -187,6 +204,29 @@ ul {
   line-height: 1;
 }
 
+#submit-btn {
+  width: 100%;
+  height: 65px;
+  background-color: #1a1a1a;
+  border: 0px;
+  margin-top: 50px;
+  color: #fafafa;
+  text-align: left;
+  font-size: 20px;
+  padding-left: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+#submit-btn:hover {
+  background-color: #ababab;
+}
+
+#submit-btn:active {
+  background-color: #fafafa;
+  color: #1a1a1a;
+  transition: all 0.3s ease-in-out;
+}
+
 footer {
   background-color: #1a1a1a;
   margin-top: 50px;
@@ -210,6 +250,63 @@ footer {
   margin-bottom: 15px;
 }
 
+.about .main-p {
+  margin-top: 75px;
+  margin-bottom: 100px;
+}
+
+#icon-contact {
+  transform: rotate(180deg);
+}
+
+.form-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ababab;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+  margin-top: 75px;
+}
+
+.form-heading object {
+  transform: rotate(135deg);
+}
+
+.input {
+  height: 45px;
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 0px;
+  border-bottom: 1px solid #363636;
+  position: relative;
+  color: #fafafa;
+  outline: none;
+  transition: all 0.5s ease-out;
+}
+
+.input:focus {
+  border-bottom: 1px solid #fafafa;
+  transition: all 0.5s ease-out;
+}
+
+.label {
+  color: #ababab;
+  position: absolute;
+  top: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-heading:nth-of-type(1) {
+    margin-top: 0px;
+  }
+  .main-p {
+    margin-top: 20px;
+  }
+  #icon-contact {
+    transform: rotate(90deg);
+  }
+}
 .heading-icon {
   display: flex;
   justify-content: center;
@@ -225,6 +322,8 @@ footer {
 .about-chapter {
   border-bottom: 1px solid #ababab;
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .about-chapter .main-p {
@@ -235,6 +334,21 @@ footer {
   margin-bottom: 80px;
 }
 
+@media screen and (min-width: 768px) {
+  .about-chapter {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .chapter-div {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .chapter-div {
+    width: 40%;
+  }
+}
 body {
   background-color: #121212;
 }

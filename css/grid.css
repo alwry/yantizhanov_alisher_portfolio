@@ -50,7 +50,7 @@ img, embed, object, video, picture {
      display: grid;
      grid-template-columns: repeat(4, minmax(0, 1fr));
      grid-column-gap: 30px;
-     max-width: 100%;
+     max-width: 500px;
      margin: 0 auto;
      padding-left: 15px;
      padding-right: 15px;
@@ -87,6 +87,7 @@ img, embed, object, video, picture {
         grid-column-gap: 20px;
         padding-left: 16px;
         padding-right: 16px;
+        max-width: 900px;
      }
   
      .t-col-auto {grid-column: auto;}
