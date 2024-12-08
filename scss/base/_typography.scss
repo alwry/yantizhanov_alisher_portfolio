@@ -4,6 +4,10 @@ body {
     font-family: 'Manrope', Arial, sans-serif;
 }
 
+.mobile-hidden {
+    display: none;
+}
+
 .welcome-h2 {
     font-size: 120px;
     letter-spacing: -10px;
@@ -93,6 +97,17 @@ ul {
     font-weight: 300;
 }
 
+.case-p {
+    font-size: 15px;
+    color: a.$main-white;
+    line-height: 1.5;
+    margin: 50px 0;
+}
+
+.case-content .chapter-h3 {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
 
 @media screen and (min-width: 768px) {
     .hailing-text {
@@ -124,6 +139,10 @@ ul {
     .decorative-p {
         font-size: 90px;
         margin-left: -10px;
+    }
+
+    .mobile-hidden {
+        display: block;
     }
 }
 
