@@ -2,6 +2,10 @@ body {
   font-family: "Manrope", Arial, sans-serif;
 }
 
+.mobile-hidden {
+  display: none;
+}
+
 .welcome-h2 {
   font-size: 120px;
   letter-spacing: -10px;
@@ -91,6 +95,18 @@ ul {
   font-weight: 300;
 }
 
+.case-p {
+  font-size: 15px;
+  color: #fafafa;
+  line-height: 1.5;
+  margin: 50px 0;
+}
+
+.case-content .chapter-h3 {
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
 @media screen and (min-width: 768px) {
   .hailing-text {
     font-size: 36px;
@@ -115,6 +131,9 @@ ul {
   .decorative-p {
     font-size: 90px;
     margin-left: -10px;
+  }
+  .mobile-hidden {
+    display: block;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -323,6 +342,25 @@ footer {
     transform: rotate(90deg);
   }
 }
+.case-info-con {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tools-p {
+  width: 50%;
+  text-align: right;
+}
+
+.case-info {
+  margin-bottom: 15px;
+}
+
+.case-content .decorative-p {
+  margin: auto;
+  color: #FF4B00;
+}
+
 .heading-icon {
   display: flex;
   justify-content: center;

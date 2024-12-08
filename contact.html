@@ -44,7 +44,7 @@
 
             <section class="form-con">
                 <div class="grid-con">
-                    <p class="main-p col-span-full t-col-span-3 l-col-start-1 l-col-span-4">Let’s create something amazing together! Whether you’re looking for a fresh perspective, need help with a project, or just want to connect, I’m here to help. Feel free to reach out—I’d love to hear from you!</p>
+                    <p class="main-p col-span-full t-col-span-3 l-col-start-1 l-col-span-4 main-p-anim">Let’s create something amazing together! Whether you’re looking for a fresh perspective, need help with a project, or just want to connect, I’m here to help. Feel free to reach out—I’d love to hear from you!</p>
 
                     <div class="form-heading col-span-full t-col-span-5 l-col-start-8">
                        <h3 class="form-heading-h3">
@@ -89,9 +89,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
     <script>
         const lenis = new Lenis()
-        lenis.on('scroll', (e) => {
-            console.log(e)
-        })
 
         function raf(time) {
             lenis.raf(time)
