@@ -1,0 +1,9 @@
+@use '../abstracts/' as a;
+
+:root {
+    --plyr-color-main: #FF4B00;
+    --plyr-control-icon-size: 15px;
+    --plyr-control-radius: 20px;
+    --plyr-font-family: v.$body-font-family;
+    --plyr-control-spacing: 15px;
+  }

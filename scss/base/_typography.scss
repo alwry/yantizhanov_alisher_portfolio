@@ -12,6 +12,10 @@ body {
     color: a.$main-color;
 }
 
+a:hover {
+    cursor: pointer;
+}
+
 a, p, h1, h2, h3, li {
     color: a.$main-white;
     list-style-type: none;
