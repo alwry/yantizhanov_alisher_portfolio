@@ -21,3 +21,26 @@
 .cta-button p{
     line-height: 1;
 }
+
+#submit-btn {
+    width: 100%;
+    height: 65px;
+    background-color: a.$dark-grey;
+    border: 0px;
+    margin-top: 50px;
+    color: a.$main-white;
+    text-align: left;
+    font-size: 20px;
+    padding-left: 30px;
+    transition: all .3s ease-in-out;
+}
+
+#submit-btn:hover {
+    background-color: a.$main-grey;
+}
+
+#submit-btn:active {
+    background-color: a.$main-white;
+    color: a.$dark-grey;
+    transition: all .3s ease-in-out;
+}
