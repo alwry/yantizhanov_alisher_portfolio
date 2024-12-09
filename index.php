@@ -20,20 +20,27 @@
     </head>
     <body>
         <header>
-            <div class="grid-con" id="header-mobile">
+        <div class="grid-con" id="header-mobile">
                 <div class="col-span-1">
                     <object data="img/logo-portfolio-02.svg" type="image/svg+xml" id="header-logo"></object>
                 </div>
-                <div class="col-span-1 col-start-4 t-col-start-5 t-col-span-3 l-col-start-10 l-col-end-13" id="burger-div">
+                <div class="col-span-1 col-start-4" id="burger-div">
                     <object data="img/list.svg" type="image/svg+xml" id="burger"></object>
-                    <nav class="main-nav">
-                        <ul class="main-nav-ul">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </nav>
                 </div>
+                <nav class="main-nav t-col-start-5 t-col-span-3 l-col-start-10 l-col-end-13">
+                    <ul class="main-nav-ul">
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="about.php">About</a></li>
+                        <li><a href="contact.php">Contact</a></li>
+                    </ul>
+                </nav>
+                <nav class="mobile-nav col-span-full hidden">
+                    <ul class="mobile-nav-ul">
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="about.php">About</a></li>
+                        <li><a href="contact.php">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
         <main>
@@ -101,9 +108,9 @@
             <div class="grid-con" id="footer-div">
                 
                 <ul class="col-span-1 col-start-1">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                 </ul>
                 <object data="img/logo-portfolio-02.svg" type="image/svg+xml" class="footer-log col-start-4 col-span-2 t-col-start-6 t-col-span-3 l-col-start-11 l-col-end-13"></object>
                 <p class="descriptor col-span-full">
@@ -128,6 +135,7 @@
         
     </script>
     <script src="js/main.js"></script>
+    <script src="js/burger.js"></script>
     </body>
     
 </html>

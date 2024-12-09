@@ -14,7 +14,7 @@
     </head>
     <body>
         <header>
-            <div class="grid-con" id="header-mobile">
+        <div class="grid-con" id="header-mobile">
                 <div class="col-span-1">
                     <object data="img/logo-portfolio-02.svg" type="image/svg+xml" id="header-logo"></object>
                 </div>
@@ -23,16 +23,16 @@
                 </div>
                 <nav class="main-nav t-col-start-5 t-col-span-3 l-col-start-10 l-col-end-13">
                     <ul class="main-nav-ul">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="about.php">About</a></li>
+                        <li><a href="contact.php">Contact</a></li>
                     </ul>
                 </nav>
                 <nav class="mobile-nav col-span-full hidden">
                     <ul class="mobile-nav-ul">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="about.php">About</a></li>
+                        <li><a href="contact.php">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -148,9 +148,9 @@
             <div class="grid-con" id="footer-div">
                 
                 <ul class="col-span-1 col-start-1">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                 </ul>
                 <object data="img/logo-portfolio-02.svg" type="image/svg+xml" class="footer-log col-start-4 col-span-2 t-col-start-6 t-col-span-3 l-col-start-11 l-col-end-13"></object>
                 <p class="descriptor col-span-full">

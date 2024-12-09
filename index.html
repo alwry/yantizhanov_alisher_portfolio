@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
         <link rel="fonts" href="fonts/Wildcut.ttf">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <title>Alisher Portfolio</title>
     </head>
     <body>
@@ -19,16 +20,23 @@
                 <div class="col-span-1">
                     <object data="img/logo-portfolio-02.svg" type="image/svg+xml" id="header-logo"></object>
                 </div>
-                <div class="col-span-1 col-start-4 t-col-start-5 t-col-span-3 l-col-start-10 l-col-end-13" id="burger-div">
+                <div class="col-span-1 col-start-4" id="burger-div">
                     <object data="img/list.svg" type="image/svg+xml" id="burger"></object>
-                    <nav class="main-nav">
-                        <ul class="main-nav-ul">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </nav>
                 </div>
+                <nav class="main-nav t-col-start-5 t-col-span-3 l-col-start-10 l-col-end-13">
+                    <ul class="main-nav-ul">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <nav class="mobile-nav col-span-full hidden">
+                    <ul class="mobile-nav-ul">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
         <main>
@@ -66,7 +74,7 @@
                 <div class="grid-con" id="works-con">
                     <h2 class="works-h2 col-span-2">Selected works</h2>
                     <div class="work-card col-span-full">
-                        <img src="img/jibek-preview.jpg" alt="Jibek case study preview">
+                        <img src="img/orbitz-preview.jpg" alt="Jibek case study preview">
                         
                         <p class="descriptor">August 2022</p>
                         <h3 class="card-heading">Jibek – Exploring Almaty</h3>
@@ -77,7 +85,7 @@
                     </div>
 
                     <div class="work-card col-span-full">
-                        <img src="img/jibek-preview.jpg" alt="Jibek case study preview">
+                        <img src="img/design-preview.jpg" alt="Jibek case study preview">
                         
                         <p class="descriptor">November 2022</p>
                         <h3 class="card-heading">Design3D – Interior Design Studio</h3>
@@ -138,6 +146,7 @@
         
     </script>
     <script src="js/main.js"></script>
+    <script src="js/burger.js"></script>
     </body>
     
 </html>

@@ -36,3 +36,5 @@ Alisher Yantizhanov
 MIT License
 
 ### Thank you for attention!
+
+#### It works perfectly on my side, and I really hope it won't break when I push to Github

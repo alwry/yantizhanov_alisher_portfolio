@@ -19,16 +19,23 @@
                 <div class="col-span-1">
                     <object data="img/logo-portfolio-02.svg" type="image/svg+xml" id="header-logo"></object>
                 </div>
-                <div class="col-span-1 col-start-4 t-col-start-5 t-col-span-3 l-col-start-10 l-col-end-13" id="burger-div">
+                <div class="col-span-1 col-start-4" id="burger-div">
                     <object data="img/list.svg" type="image/svg+xml" id="burger"></object>
-                    <nav class="main-nav">
-                        <ul class="main-nav-ul">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </nav>
                 </div>
+                <nav class="main-nav t-col-start-5 t-col-span-3 l-col-start-10 l-col-end-13">
+                    <ul class="main-nav-ul">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <nav class="mobile-nav col-span-full hidden">
+                    <ul class="mobile-nav-ul">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
         <main>
@@ -135,6 +142,7 @@
         
     </script>
     <script src="js/main.js"></script>
+    <script src="js/burger.js"></script>
     </body>
     
 </html>
