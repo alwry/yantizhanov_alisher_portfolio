@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -44,9 +45,9 @@
 
             <section class="form-con">
                 <div class="grid-con">
-                    <p class="main-p col-span-full t-col-span-3 l-col-start-1 l-col-span-4 main-p-anim">Let’s create something amazing together! Whether you’re looking for a fresh perspective, need help with a project, or just want to connect, I’m here to help. Feel free to reach out—I’d love to hear from you!</p>
-                    <form method="post" action="sendmail.php" class="col-span-full t-col-span-5 l-col-start-8">
-                        <div class="form-heading col-span-full t-col-span-5 l-col-start-8">
+                    <p class="main-p col-span-full t-col-span-3 l-col-start-1 l-col-span-4 main-p-anim">Lets create something amazing together! Whether youre looking for a fresh perspective, need help with a project, or just want to connect, Im here to help. Feel free to reach out—Id love to hear from you!</p>
+                    <form method="post" action="sendmail.php" class="contact-form col-span-full t-col-span-5 l-col-start-8">
+                        <div class="form-heading">
                             <h3 class="form-heading-h3">
                                 Project Details
                             </h3> 
@@ -62,7 +63,7 @@
                             <object data="img/arrow.svg" type="image/svg+xml"></object>
                         </div>
                         <input type="text" name="name" id="name" class="input" placeholder="Your name">
-                        <input type="text" name="email" id="email" class="input" placeholder="Your email">
+                        <input type="email" name="email" id="email" class="input" placeholder="Your email">
                         <input type="text" name="brief" id="brief" class="input" placeholder="Tell me about this project">
                         <input type="submit" name="sumbit" id="submit-btn" value="Submit!">
                     </form>

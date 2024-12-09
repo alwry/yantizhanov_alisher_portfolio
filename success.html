@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
         <link rel="fonts" href="fonts/Wildcut.ttf">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Alisher Portfolio</title>
@@ -31,41 +32,10 @@
             </div>
         </header>
         <main>
-            <section class="about">
-                <div class="grid-con">
-                    <h2 class="page-h2 col-span-3 t-col-span-4 l-col-span-6">
-                        Contact
-                    </h2>
-                    <div class="col-span-1 t-col-start-6 t-col-span-1 l-col-start-8 heading-icon" id="icon-contact">
-                        <object data="img/arrow.svg" type="image/svg+xml"></object>
-                    </div>
-                </div>
-            </section>
-
-            <section class="form-con">
-                <div class="grid-con">
-                    <p class="main-p col-span-full t-col-span-3 l-col-start-1 l-col-span-4 main-p-anim">Let’s create something amazing together! Whether you’re looking for a fresh perspective, need help with a project, or just want to connect, I’m here to help. Feel free to reach out—I’d love to hear from you!</p>
-                    <form method="post" action="sendmail.php" class="col-span-full t-col-span-5 l-col-start-8">
-                        <div class="form-heading col-span-full t-col-span-5 l-col-start-8">
-                            <h3 class="form-heading-h3">
-                                Project Details
-                            </h3> 
-                            <object data="img/arrow.svg" type="image/svg+xml"></object>
-                        </div>
-                        <input type="text" name="field" id="field" class="input" placeholder="What's the field?">
-                        <input type="text" name="budget" id="budget" class="input" placeholder="Your estimated budget">
-                        <input type="text" name="deadline" id="deadline" class="input" placeholder="What's the deadline?">
-                        <div class="form-heading">
-                            <h3 class="form-heading-h3">
-                            Personal Details
-                            </h3> 
-                            <object data="img/arrow.svg" type="image/svg+xml"></object>
-                        </div>
-                        <input type="text" name="name" id="name" class="input" placeholder="Your name">
-                        <input type="text" name="email" id="email" class="input" placeholder="Your email">
-                        <input type="text" name="brief" id="brief" class="input" placeholder="Tell me about this project">
-                        <input type="submit" name="sumbit" id="submit-btn" value="Submit!">
-                    </form>
+            <section class="grid-con" id="thank-you">
+                <div class="col-span-full ty-message">
+                    <p class="decorative-h">Thank you!</p>
+                    <p class="main-p">Your message was sent successfully!</p>
                 </div>
             </section>
         </main>
@@ -89,6 +59,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
     <script>
         const lenis = new Lenis()
+
 
         function raf(time) {
             lenis.raf(time)
