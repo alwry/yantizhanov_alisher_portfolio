@@ -17,8 +17,9 @@ A lot of things have been planned, the designer side of me is happy, but develop
 
 ## Technologies used:
 1. HTML
-2. CSS
+2. SCSS/CSS
 3. JavaScript :(
+4. PHP and mySQL
 4. Figma <3
 
 ## Classes
@@ -30,11 +31,12 @@ A lot of things have been planned, the designer side of me is happy, but develop
 
 ## Credits
 
-Alisher Yantizhanov
+Coding: Alisher
+Design: Alisher
+Project Management: Alisher
 
 ## License
 MIT License
 
 ### Thank you for attention!
-
-#### It works perfectly on my side, and I really hope it won't break when I push to Github
+*It works perfectly on my side, and I really hope it won't break when I push to Github*
