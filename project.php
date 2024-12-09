@@ -2,9 +2,17 @@
 <html lang="en">
 <?php
     require_once('includes/connect.php');
-    $query = 'SELECT * FROM projects, media WHERE projects.id = projects_id AND projects.id ='.$_GET['id']; 
+
+    $query = 'SELECT projects.*,
+    GROUP_CONCAT(media_url) AS images, 
+    (SELECT media_url FROM media WHERE projects_id = projects.id AND media_url LIKE "%preview%") AS preview_image
+    FROM projects, media 
+    WHERE projects_id = projects.id AND projects.id =' . $_GET['id'];
     $results = mysqli_query($connect,$query);
+    
     $row = mysqli_fetch_assoc($results);
+    
+    $image_array = explode(',',$row['images']);
     ?> 
     <head>
         <meta charset="UTF-8">
@@ -30,7 +38,7 @@
                     <object data="img/list.svg" type="image/svg+xml" id="burger"></object>
                     <nav class="main-nav">
                         <ul class="main-nav-ul">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.php">Home</a></li>
                             <li><a href="about.html">About</a></li>
                             <li><a href="contact.html">Contact</a></li>
                         </ul>
@@ -68,11 +76,12 @@
             </section>
 
             <section class="case-content">
-                <img src="img/orbitz-1.jpg" alt="case study preview">
-                <div class="grid-con">
-                    <?php 
+            <?php 
                         {
-                    echo '<h3 class="chapter-h3 col-span-full">'
+                    echo '
+                <img src="img/'.$row['preview_image'].'" alt="case study preview">
+                <div class="grid-con">
+                    <h3 class="chapter-h3 col-span-full">'
                         .$row['heading_1'].'
                     </h3>
                     <p class="case-p col-span-full t-col-span-4 l-col-span-6">'
@@ -89,15 +98,13 @@
                     </p>
                     <p class="case-p col-span-full t-col-start-3 t-col-span-4 l-col-start-6 l-col-span-6">'
                     .$row['description_2'].'
-                    </p>';
-                        }
+                    </p>
+                        
                     ?>        
                     </div>
                 
-                <img src="img/orbitz-2.jpg" alt="case study preview">
                 <div class="grid-con">
-                    <?php {
-                    echo '<h3 class="chapter-h3 col-span-full">'
+                    <h3 class="chapter-h3 col-span-full">'
                         .$row['heading_3'].'
                     </h3>
                     <p class="case-p col-span-full t-col-span-4 l-col-span-6">'
@@ -106,15 +113,18 @@
                         [03]
                     </p>
                     <p class="case-p col-span-full t-col-start-3 t-col-span-4 l-col-start-7 l-col-span-6">'
-                        .$row['description_4'].'</p>';
-                    }
-                    ?>
-                </div>
-                <img src="img/orbitz-3.jpg" alt="case study preview">
-                <img src="img/orbitz-4.jpg" alt="case study preview">
-                <img src="img/orbitz-5.jpg" alt="case study preview">
-                <img src="img/orbitz-6.jpg" alt="case study preview">
-                <img src="img/orbitz-7.jpg" alt="case study preview">
+                        .$row['description_4'].'</p>
+                    
+                </div>';
+                }
+                ?>
+
+                <?php
+                for($i = 1; $i < count($image_array); $i++) {
+                        echo '<img src="img/'.$image_array[$i].'" alt="project screenshot">';
+                }
+                ?>
+            
             </section>
             <section class="grid-con" id="cta-con">
                 <h2 class="cta-heading col-span-full">
