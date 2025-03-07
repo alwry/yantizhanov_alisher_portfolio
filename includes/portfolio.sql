@@ -28,15 +28,16 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE contact_form (
-  id int NOT NULL,
+  id int NOT NULL AUTO_INCREMENT,
   name varchar(100) NOT NULL,
   email varchar(100) NOT NULL,
-  brief text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  brief text NOT NULL,
   submitted_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   field varchar(100) NOT NULL,
   budget text NOT NULL,
-  deadline text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  deadline text NOT NULL,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table contact_form
@@ -64,7 +65,7 @@ CREATE TABLE media (
   media_type enum('video','image') NOT NULL,
   media_url varchar(255) NOT NULL,
   projects_id int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table media
@@ -98,19 +99,19 @@ INSERT INTO media (media_id, media_name, media_type, media_url, projects_id) VAL
 
 CREATE TABLE projects (
   id int NOT NULL,
-  title varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  heading_1 varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  heading_2 varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  heading_3 varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  heading_4 varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  title varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  heading_1 varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  heading_2 varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  heading_3 varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  heading_4 varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   description_1 text NOT NULL,
   description_2 text NOT NULL,
   description_3 text NOT NULL,
-  description_4 text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  description_4 text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   thumb varchar(255) NOT NULL,
   tags varchar(255) NOT NULL,
   date varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table projects
@@ -132,7 +133,7 @@ CREATE TABLE users (
   id int NOT NULL,
   username varchar(125) NOT NULL,
   password varchar(125) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table users
