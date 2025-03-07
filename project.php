@@ -7,10 +7,18 @@
     GROUP_CONCAT(media_url) AS images, 
     (SELECT media_url FROM media WHERE projects_id = projects.id AND media_url LIKE "%preview%") AS preview_image
     FROM projects, media 
-    WHERE projects_id = projects.id AND projects.id =' . $_GET['id'];
-    $results = mysqli_query($connect,$query);
+    WHERE projects_id = projects.id AND projects.id = :projectsid';
+
+    $stmt = $connect->prepare($query);
+    $projectsid = $_GET['id'];
     
-    $row = mysqli_fetch_assoc($results);
+    $stmt->bindParam(':projectsid', $projectsid, PDO::PARAM_INT);
+
+    $stmt->execute();
+
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    $stmt = null;
     
     $image_array = explode(',',$row['images']);
     ?> 
