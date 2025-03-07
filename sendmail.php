@@ -29,7 +29,7 @@ if(empty($deadline)) {
 
 if(empty($email)) {
     $errors['email'] = 'You must provide an email';
-} else if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+} elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $errors['legit_email'] = 'You must provide a REAL email';
 }
 
@@ -37,29 +37,39 @@ if(empty($errors)) {
 
     //insert these values as a new row in the contacts table
 
-    $query = "INSERT INTO contact_form (name, brief, email, field, budget, deadline) VALUES('$name','$brief','$email','$field','$budget','$deadline')";
+    $query = "INSERT INTO contact_form (name, brief, email, field, budget, deadline) VALUES(:name, :brief, :email, :field, :budget, :deadline)";
 
-    if(mysqli_query($connect, $query)) {
+    $stmt = $connect->prepare($query);
 
-//format and send these values in an email
+    $stmt->bindParam(':name', $name);
+    $stmt->bindParam(':brief', $brief);
+    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':field', $field);
+    $stmt->bindParam(':budget', $budget);
+    $stmt->bindParam(':deadline', $deadline);
 
-$to = 'a_yantizhanov@fanshaweonline.ca';
-$subject = 'Message from your Portfolio site!';
+    if ($stmt->execute()) {
+        // Format and send these values in an email
+        $to = 'a_yantizhanov@fanshaweonline.ca';
+        $subject = 'Message from your Portfolio site!';
 
-$message = "You have received a new contact form submission:\n\n";
-$message .= "Name: ".$name." ".$field."\n";
-$message .= "Email: ".$email."\n\n";
-//build out rest of message body...
+        $message = "You have received a new contact form submission:\n\n";
+        $message .= "Name: " . $name . " " . $field . "\n";
+        $message .= "Email: " . $email . "\n\n";
+        // Build out the rest of the message body...
 
-mail($to,$subject,$message);
+        mail($to, $subject, $message);
 
-header('Location: success.html');
+        header('Location: success.html');
+        exit;
+    } else {
 
-}else{
+
     for($i=0; $i < count($errors); $i++) {
         echo $errors[$i].'<br>';
     }
 }
-
 }
+
+
 ?>

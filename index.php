@@ -2,8 +2,10 @@
 <html lang="en">
 <?php
     require_once('includes/connect.php');
-    $query = "SELECT title, date, projects.id AS project, media_url AS preview_image FROM projects, media WHERE projects.id = projects_id AND media_name LIKE '%preview%'";
-    $results = mysqli_query($connect,$query);
+
+    $stmt = $connect->prepare("SELECT title, date, projects.id AS project, media_url AS preview_image FROM projects, media WHERE projects.id = projects_id AND media_name LIKE '%preview%'");
+
+    $stmt->execute();
 ?>
     <head>
         <meta charset="UTF-8">
@@ -81,7 +83,7 @@
                     <h2 class="works-h2 col-span-2 t-col-span-5">Selected works</h2>
                     
                 <?php
-                    while($row = mysqli_fetch_array($results)) {
+                    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                     echo '<div class="work-card col-span-full">
                         <img src="img/'.$row['preview_image'].'" alt="Jibek case study preview">
                         
@@ -93,6 +95,8 @@
                         </div>
                     </div>';
                     }
+
+                    $stmt = null;
                 ?>
                 </div>
             </section>
@@ -117,6 +121,10 @@
                     Alisher Yantizhanov 2024. All rights reserved
                 </p>
             </div>
+
+            <?php
+echo date('l jS \of F Y h:i:s A');
+?>
         </footer>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
