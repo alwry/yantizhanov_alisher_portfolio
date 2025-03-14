@@ -9,11 +9,25 @@ body {
 }
 
 .welcome-h2 {
-    font-size: 120px;
+    font-size: 100px;
     letter-spacing: -10px;
-    line-height: .8;
+    line-height: .6;
     margin-bottom: 10px;
     color: a.$main-color;
+    font-weight: 1200;
+
+}
+.welcome-span {
+    font-family: 'ZI_SQUARE';
+    font-size: 100px;
+    letter-spacing: normal;
+}
+
+.welcome-coord {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1;
+    text-align: right;
 }
 
 a:hover {
@@ -33,11 +47,33 @@ ul {
 .welcome-text, .more-link p {
     font-weight: 300;
     font-size: 12px;
-    text-align: left;
+    text-align: right;
 }
 
 .welcome-text {
-    width: 60%;
+    font-size: 15px;
+}
+
+.pos-span {
+    font-family: 'ZI_SQUARE';
+    font-size: 11px;
+    margin-right: 20px;
+}
+
+.pos-text {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: .9;
+}
+
+.welcome-pos .pos-text:nth-of-type(1) {
+    margin-left: 20px;
+}
+.welcome-pos .pos-text:nth-of-type(2) {
+    margin-left: 0px;
+}
+.welcome-pos .pos-text:nth-of-type(3) {
+    margin-left: 50px;
 }
 
 .hailing-text {
@@ -70,7 +106,7 @@ ul {
     letter-spacing: -3px;
 }
 .decorative-h {
-    font-family: 'Wildcut';
+    font-family: 'ZI_SQUARE';
     font-size: 36px;
 }
 
@@ -118,9 +154,6 @@ ul {
         width: 30%;
     }
 
-    .welcome-text {
-        width: 40%;
-    }
 
     .work-card-text .main-p {
         width: 40%;
@@ -151,9 +184,6 @@ ul {
         font-size: 150px;
     }
 
-    .welcome-text {
-        width: 30%;
-    }
     .work-card-text .main-p {
         width: 40%;
     }

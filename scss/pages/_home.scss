@@ -13,12 +13,29 @@ body {
     flex-direction: column;
     height: 60vh;
     justify-content: flex-end;
+    padding-top: 20px;
+}
+
+.welcome-hero-copy {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    padding-top: 60px;
+}
+
+.welcome-hero-copy object {
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.welcome-pos {
+    margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
     .welcome-hero {
         flex-direction: row;
-        align-items: flex-end;
+        align-items: flex-start;
         justify-content: space-between;
     }
 }

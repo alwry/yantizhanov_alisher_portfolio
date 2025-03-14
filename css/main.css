@@ -7,11 +7,25 @@ body {
 }
 
 .welcome-h2 {
-  font-size: 120px;
+  font-size: 100px;
   letter-spacing: -10px;
-  line-height: 0.8;
+  line-height: 0.6;
   margin-bottom: 10px;
   color: #FF4B00;
+  font-weight: 1200;
+}
+
+.welcome-span {
+  font-family: "ZI_SQUARE";
+  font-size: 100px;
+  letter-spacing: normal;
+}
+
+.welcome-coord {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1;
+  text-align: right;
 }
 
 a:hover {
@@ -31,11 +45,35 @@ ul {
 .welcome-text, .more-link p {
   font-weight: 300;
   font-size: 12px;
-  text-align: left;
+  text-align: right;
 }
 
 .welcome-text {
-  width: 60%;
+  font-size: 15px;
+}
+
+.pos-span {
+  font-family: "ZI_SQUARE";
+  font-size: 11px;
+  margin-right: 20px;
+}
+
+.pos-text {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 0.9;
+}
+
+.welcome-pos .pos-text:nth-of-type(1) {
+  margin-left: 20px;
+}
+
+.welcome-pos .pos-text:nth-of-type(2) {
+  margin-left: 0px;
+}
+
+.welcome-pos .pos-text:nth-of-type(3) {
+  margin-left: 50px;
 }
 
 .hailing-text {
@@ -69,7 +107,7 @@ ul {
 }
 
 .decorative-h {
-  font-family: "Wildcut";
+  font-family: "ZI_SQUARE";
   font-size: 36px;
 }
 
@@ -114,9 +152,6 @@ ul {
   .work-card-text .main-p {
     width: 30%;
   }
-  .welcome-text {
-    width: 40%;
-  }
   .work-card-text .main-p {
     width: 40%;
   }
@@ -139,9 +174,6 @@ ul {
 @media screen and (min-width: 1200px) {
   .welcome-h2 {
     font-size: 150px;
-  }
-  .welcome-text {
-    width: 30%;
   }
   .work-card-text .main-p {
     width: 40%;
@@ -434,12 +466,29 @@ body {
   flex-direction: column;
   height: 60vh;
   justify-content: flex-end;
+  padding-top: 20px;
+}
+
+.welcome-hero-copy {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  padding-top: 60px;
+}
+
+.welcome-hero-copy object {
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.welcome-pos {
+  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
   .welcome-hero {
     flex-direction: row;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: space-between;
   }
 }
