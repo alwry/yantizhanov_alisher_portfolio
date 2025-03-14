@@ -110,3 +110,40 @@ caseText.forEach(casep => {
 
 
 })();
+
+(() => {
+  const form = document.querySelector(".contact-form");
+  const feedback = document.querySelector("#feedback");
+
+  function regForm(event){
+      event.preventDefault();
+      console.log("regForm Called");
+      const thisform = event.currentTarget;
+      const url = 'sendmail.php';
+      console.log(thisform.element);
+      const formdata = 
+      "field"+thisform.elements.field.value+
+      "&budget"+thisform.elements.budget.value+
+      "&deadline"+thisform.elements.deadline.value+
+      "&name"+thisform.elements.name.value+
+      "&email"+thisform.elements.email.value+
+      "&brief"+thisform.elements.brief.value;
+      console.log(formdata);
+      fectch(url, {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/x-www-form-urlencoded"
+          },
+          body: formdata
+      })
+      .then(response => response.json())
+      .then(response => {
+          console.log(response);
+      })
+      .catch();
+
+  }
+
+  form.addEventListener("submit, regForm");
+
+})();
