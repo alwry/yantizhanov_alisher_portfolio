@@ -8,28 +8,39 @@ body {
     margin: 300px 0px;
 }
 
+#welcome {
+    padding-top: 50px;
+}
+
 .welcome-hero {
-    display: flex;
-    flex-direction: column;
-    height: 60vh;
-    justify-content: flex-end;
-    padding-top: 20px;
+    height: 100%;
+    padding-top: 10px;
 }
 
 .welcome-hero-copy {
     display: flex;
     align-items: end;
     flex-direction: column;
-    padding-top: 60px;
+    padding-top: 10px;
 }
 
 .welcome-hero-copy object {
-    margin-bottom: 30px;
-    margin-top: 10px;
+    margin: 5px 0px;
 }
 
 .welcome-pos {
-    margin-bottom: 30px;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome-text-div {
+    margin-top: 50px;
+}
+
+.welcome-text-div .welcome-text {
+    text-align: left;
 }
 
 @media screen and (min-width: 768px) {
@@ -37,5 +48,31 @@ body {
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-between;
+    }
+
+    .welcome-hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-top: 20px;
+        height: 50vh;
+    }
+    
+    .welcome-hero-copy {
+        display: flex;
+        align-items: end;
+        flex-direction: column;
+        padding-top: 60px;
+        justify-content: flex-end;
+        padding-bottom: 20px;
+    }
+
+    .welcome-hero-copy object {
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+
+    .welcome-pos {
+        margin-bottom: 30px;
     }
 }
