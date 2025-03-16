@@ -39,10 +39,18 @@ ul {
     padding: 0;
 }
 
-.welcome-text, .more-link p {
+.welcome-text {
     font-weight: 300;
     font-size: 12px;
     text-align: right;
+}
+
+.more-link p {
+    text-align: left;
+}
+
+.more-link p span {
+    margin-left: 30px;
 }
 
 .welcome-text {
@@ -52,30 +60,45 @@ ul {
 .pos-span {
     font-family: 'ZI_SQUARE';
     font-size: 11px;
-    margin-right: 20px;
+    margin-left: 20px;
+    color: a.$main-color;
 }
 
-.pos-text {
-    font-size: 15px;
-    font-weight: 700;
-    line-height: .9;
-}
 
 
 .hailing-text {
     font-size: 20px;
     margin-bottom: 25px;
-}
-
-.works-h2 {
-    margin-bottom: 25px;
     font-weight: 500;
 }
 
-.work-card-text .main-p {
-    width: 60%;
+.hailing-text span {
     color: a.$main-grey;
-    font-weight: 400;
+}
+
+.works-h2 {
+    margin-bottom: 20px;
+    font-weight: 500;
+    letter-spacing: -4px;
+    font-size: 86px;
+    color: a.$main-bg;
+    margin-top: 30px;
+    line-height: .8;
+}
+
+
+.card-heading {
+    color: a.$main-bg;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.card-cols .main-p {
+    color: a.$main-bg;
 }
 
 .cta-heading {
@@ -129,6 +152,15 @@ ul {
 .case-content .chapter-h3 {
     margin-top: 50px;
     margin-bottom: 10px;
+}
+
+.view-link {
+    transition: all .3s ease-out;
+}
+
+.view-link:hover {
+    color: a.$main-color;
+    transition: all .3s ease-out;
 }
 
 @media screen and (min-width: 768px) {
@@ -194,6 +226,21 @@ ul {
         font-size: 40px;
         font-weight: 600;
     }
+
+    .card-heading {
+        font-size: 40px;
+        line-height: .9;
+        margin-bottom: 20px;
+        margin-top: 0px;
+    }
+
+    .card-heading-div .main-p {
+        width: 70%;
+    }
+
+    .card-desc .main-p {
+        margin-top: 0px;
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -205,5 +252,9 @@ ul {
         width: 40%;
     }
 
-
+    .works-h2 {
+        letter-spacing: -10px;
+        font-size: 150px;
+        line-height: .9;
+    }
 }

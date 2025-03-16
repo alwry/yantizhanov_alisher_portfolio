@@ -1,25 +1,58 @@
 @use '../abstracts/' as a;
 
-.work-card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 100px;
-}
-
 .descriptor {
-    font-size: 12px;
+    font-size: 11px;
     color: a.$main-grey;
     margin-top: 25px;
-    margin-bottom: 5px;
+    line-height: .7;
 }
 
+.card {
+    background-color: a.$main-white;
+    padding: 40px 0px;
+    border-top: 1px solid a.$main-grey;
+}
 
+.card-text {
+    height: 100%;
+}
 
-.work-card-text {
+.card-cols {
     display: flex;
     flex-direction: row;
+    justify-content: end;
+}
+
+.card-left-col, .card-right-col {
+    width: 50%;
+}
+
+.card-left-col {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
     justify-content: space-between;
-    margin-top: 15px;
-    width: 100%;
+}
+
+.card-right-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.card-right-col p{
+    text-align: right;
+}
+
+.card img {
+    border-radius: 10px;
+    border: 1px solid a.$main-grey;
+}
+
+@media screen and (min-width: 768px) {
+    .card-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
