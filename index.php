@@ -46,37 +46,20 @@
             </div>
         </header>
         <main>
-            <section class="welcome-con">
-            <div class="grid-con" id="welcome">
-                    <div class="welcome-hero col-span-full t-col-span-3 l-col-span-6">
+        <section class="welcome-con">
+                <div class="grid-con" id="welcome">
+                    <div class="welcome-hero col-span-2 t-col-span-4 l-col-span-6">
                         <h2 class="welcome-h2">
-                            <span class="welcome-span">ALISH Portfolio</span>
+                            ALISH Portfolio
                         </h2>
                     </div>
-                    <div class="welcome-hero-copy l-col-span-6">
+                    <div class="welcome-hero-copy col-span-2 t-col-start-5 t-col-end-7 l-col-span-6">
                         <p class="welcome-text">
                             London, Canada
                         </p>
                         <object data="img/flower_3.svg" type="image/svg+xml"></object>
                         <p class="welcome-coord">
                             43.2380° N<br> 81.2642° W
-                        </p>
-                    </div>
-                    <div class="welcome-pos col-span-full t-col-span-3 l-col-span-4">
-                        <p class="pos-text">
-                            <span class="pos-span">(01)</span>UI/UX Designer
-                        </p>
-                        <p class="pos-text">
-                            <span class="pos-span">(02)</span>Digital Designer
-                        </p>
-                        <p class="pos-text">
-                            <span class="pos-span">(03)</span>Front-End Developer
-                        </p>
-                    </div>
-
-                    <div class="welcome-text-div l-col-start-9 l-col-end-13">
-                        <p class="welcome-text">
-                            Based In London, Ontario, I create designs that forge meaningful connections by exploring novel ways to interact with people's emotions and experiences.
                         </p>
                     </div>
                 </div>
@@ -121,6 +104,8 @@
 
                     $stmt = null;
                 ?>
+                
+
                 </div>
             </section>
 
