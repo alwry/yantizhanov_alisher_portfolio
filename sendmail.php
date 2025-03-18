@@ -50,12 +50,15 @@ if(empty($errors)) {
 
     if ($stmt->execute()) {
         // Format and send these values in an email
-        $to = 'a_yantizhanov@fanshaweonline.ca';
+        $to = 'i@alishdesign.ca';
         $subject = 'Message from your Portfolio site!';
 
         $message = "You have received a new contact form submission:\n\n";
-        $message .= "Name: " . $name . " " . $field . "\n";
-        $message .= "Email: " . $email . "\n\n";
+        $message .= "Name: " . $name . " " . $email . "\n";
+        $message .= "Field: " . $field . "\n\n";
+        $message .= "Brief: " . $brief . "\n\n";
+        $message .= "Budget: " . $budget . "\n\n";
+        $message .= "Deadline: " . $deadline . "\n\n";
         // Build out the rest of the message body...
 
         mail($to, $subject, $message);
