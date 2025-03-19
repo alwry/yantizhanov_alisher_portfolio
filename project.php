@@ -33,6 +33,10 @@
         <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
         <link rel="fonts" href="fonts/Wildcut.ttf">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+        <link rel="manifest" href="img/site.webmanifest">
         <?php 
     echo '<title>'.$row['title'].'</title>' ?>
     </head>
