@@ -2,11 +2,12 @@
 // const sidebar = document.querySelector(".sidebar");
 // const showSidebarButton = document.querySelector(".desktop-hidden a");
 gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(SplitText)
+
 const player = new Plyr('video');
 const welcomeHeading = document.querySelector('.welcome-h2');
 const welcomeText = document.querySelector('.welcome-text');
-const hailingCon = document.querySelector('#hailing-con');
-const workCards = document.querySelectorAll('.work-card');
+const workCards = document.querySelectorAll('.card');
 const pageHeading = document.querySelector('.page-h2');
 const aboutChapters = document.querySelectorAll('.about-chapter');
 const ctaHeading = document.querySelector('.cta-heading');
@@ -25,19 +26,6 @@ gsap.fromTo(pageHeading,
 
 gsap.fromTo(contactText, 
   {x: -300, opacity: 0}, {x: 0, opacity: 1, duration: 1.5, ease: "power4.out"});
-
-gsap.set(hailingCon, {opacity: 0, x: -1000});
-gsap.to(hailingCon, {
-  opacity: 1,
-  x: 0,
-  ease: "power4.out",
-  scrollTrigger: {
-    trigger: hailingCon,
-    start: 'top bottom',
-    end: 'bottom 60%',
-    scrub: true,
-  }
-});
 
 gsap.set(ctaHeading, {opacity: 0});
 gsap.to(ctaHeading, {
@@ -59,6 +47,7 @@ workCards.forEach(card => {
     scale: 1,
     scrollTrigger: {
       trigger: card,
+      toggleActions: 'play none none none',
       start: 'top bottom',
       end: 'bottom 60%',
       scrub: true,
@@ -96,54 +85,31 @@ caseText.forEach(casep => {
   });
 })
 
+// about me home page animation ->
+
+const splitText = new SplitText(".hailing-text", { type: "lines", linesClass: "lineChild" });
+new SplitText(".hailing-text", { type: "lines", linesClass: "lineParent" });
+
+const lines = document.querySelectorAll(".lineChild");
+
+lines.forEach((line) => {
+  gsap.from(line, {
+    duration: 0.75,
+    yPercent: 100,
+    opacity: 0,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: line,
+      start: "top 60%",
+      end: "top 40%",
+      scrub: true, 
+      toggleActions: "play none none none", 
+    },
+  });
+});
+
+  })();
 
 
 
 
-
-
-// function showSidebar() {
-//     sidebar.classList.toggle("show");
-//   }
-
-// showSidebarButton.addEventListener("click", showSidebar);
-
-
-})();
-
-(() => {
-  const form = document.querySelector(".contact-form");
-  const feedback = document.querySelector("#feedback");
-
-  function regForm(event){
-      event.preventDefault();
-      console.log("regForm Called");
-      const thisform = event.currentTarget;
-      const url = 'sendmail.php';
-      console.log(thisform.element);
-      const formdata = 
-      "field"+thisform.elements.field.value+
-      "&budget"+thisform.elements.budget.value+
-      "&deadline"+thisform.elements.deadline.value+
-      "&name"+thisform.elements.name.value+
-      "&email"+thisform.elements.email.value+
-      "&brief"+thisform.elements.brief.value;
-      console.log(formdata);
-      fectch(url, {
-          method: "POST",
-          headers: {
-              "Content-Type": "application/x-www-form-urlencoded"
-          },
-          body: formdata
-      })
-      .then(response => response.json())
-      .then(response => {
-          console.log(response);
-      })
-      .catch();
-
-  }
-
-  form.addEventListener("submit, regForm");
-
-})();
