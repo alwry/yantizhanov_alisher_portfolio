@@ -154,6 +154,7 @@ echo date('l jS \of F Y h:i:s A');
         requestAnimationFrame(raf)
         
     </script>
+    <script src="js/SplitText.js"></script>
     <script src="js/main.js"></script>
     <script src="js/burger.js"></script>
     </body>
