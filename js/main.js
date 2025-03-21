@@ -15,6 +15,7 @@ const contactText = document.querySelector('.main-p-anim');
 const caseText = document.querySelectorAll('.case-p');
 
 
+
 gsap.fromTo(welcomeHeading, 
   {x: -300, opacity: 0, scale: .4}, {x: 0, opacity: 1, scale: 1, duration: .8, ease: "power4.out"});
 
