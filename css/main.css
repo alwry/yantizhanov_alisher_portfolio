@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "ZI_SQUARE";
+  src: url("../fonts/ZI_SQUARE.woff2") format("woff2"), url("../fonts/ZI_SQUARE.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   font-family: "Manrope", Arial, sans-serif;
 }
@@ -55,7 +61,7 @@ ul {
 }
 
 .pos-span {
-  font-family: "ZI_SQUARE";
+  font-family: "ZI_SQUARE", "Manrope", Arial, sans-serif;
   font-size: 11px;
   margin-left: 20px;
   color: #FF4B00;
@@ -112,7 +118,7 @@ ul {
 }
 
 .decorative-h {
-  font-family: "ZI_SQUARE";
+  font-family: "ZI_SQUARE", "Manrope", Arial, sans-serif;
   font-size: 36px;
 }
 
