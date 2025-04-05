@@ -1,8 +1,9 @@
 @use '../abstracts/' as a;
 
 footer{
-    background-color: a.$dark-grey;
+    background-color: a.$main-bg-white;
     margin-top: 50px;
+    border-top: 1px solid a.$main-grey;
 }
 
 #footer-div ul li {

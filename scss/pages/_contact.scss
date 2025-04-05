@@ -27,22 +27,22 @@
     width: 100%;
     height: 45px;
     margin-top: 30px;
-    background-color: #ffffff00;
+    background-color: #00000000;
     border: 0px;
     border-bottom: 1px solid a.$sec-grey;
     position: relative;
-    color: a.$main-white;
+    color: a.$main-bg;
     outline: none;
     transition: all .5s ease-out;
 }
 
 .input:focus {
-    border-bottom: 1px solid a.$main-white;
+    border-bottom: 1px solid a.$main-bg;
     transition: all .5s ease-out;
 }
 
 .label {
-    color: a.$main-grey;
+    color: a.$main-color;
     position: absolute;
     top: 0;
 }

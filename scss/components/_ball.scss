@@ -1,0 +1,26 @@
+@use '../abstracts/' as a;
+
+.ball {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: a.$main-bg;
+    pointer-events: none;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    opacity: 0; // hidden by default
+    transition: transform 0.2s ease-out, background-color 0.2s ease-out, opacity 0.2s ease-out;
+  }
+  
+  .ball-hover {
+    background-color: a.$main-color;
+    opacity: 1;
+  }
+  
+  .hide-cursor {
+    cursor: none !important;
+  }
+  

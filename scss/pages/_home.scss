@@ -1,7 +1,7 @@
 @use '../abstracts/' as a;
 
 body {
-    background-color: a.$main-bg;
+    background-color: a.$main-bg-white;
 }
 
 .hailing {
@@ -10,11 +10,15 @@ body {
 
 #welcome {
     padding-top: 50px;
+    margin-bottom: 10px;
 }
 
 .welcome-hero {
     height: 100%;
     padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .welcome-hero-copy {
@@ -44,10 +48,10 @@ body {
 }
 
 .works {
-    background-color: a.$main-white;
+    background-color: a.$main-bg-white;
 }
 
-.lineParent {
+.lineParent-hailing, .lineParent-welcome, .lineParent-cta, .lineParent-coord, .lineParent-phs {
     overflow: hidden;
   }
 
@@ -83,4 +87,15 @@ body {
     .welcome-pos {
         margin-bottom: 30px;
     }
+    
+}
+
+@media screen and (min-width: 1200px) {
+
+
+
+      
+
+      
+
 }
