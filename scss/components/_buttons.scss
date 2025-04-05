@@ -4,19 +4,43 @@
     height: 70px;
     text-align: left;
     font-size: 20px;
-    border: 0px;
-    background-color: a.$dark-grey;
-    color: a.$main-white;
+    border: 1px solid rgba(255, 255, 255, 0.3); // light frosty border
+    background: rgba(255, 255, 255, 0.1); // semi-transparent background
+    backdrop-filter: blur(10px); // glass blur
+    -webkit-backdrop-filter: blur(10px); // Safari support
     padding: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+
+.cta-button p {
+    color: a.$main-bg;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all .3s ease-in-out;
 }
+
+.cta-button:hover {
+    background: rgba(255, 255, 255, 0.25); // slightly more opaque on hover
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  }
+
 
 .button-arrow {
     transform: rotate(45deg);
     height: 30px;
+    transition: transform 0.3s ease-in-out;
 }
+
+.cta-button:hover .button-arrow {
+    transform: rotate(45deg) scale(.7);
+    transition: transform 0.3s ease-in-out;
+  }
 
 .cta-button p{
     line-height: 1;
@@ -25,22 +49,30 @@
 #submit-btn {
     width: 100%;
     height: 65px;
-    background-color: a.$dark-grey;
-    border: 0px;
+    background: rgba(255, 255, 255, 0.1); // semi-transparent glass look
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
     margin-top: 50px;
-    color: a.$main-white;
+    color: a.$main-bg;
     text-align: left;
     font-size: 20px;
     padding-left: 30px;
-    transition: all .3s ease-in-out;
-}
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
 
-#submit-btn:hover {
-    background-color: a.$main-grey;
-}
-
-#submit-btn:active {
-    background-color: a.$main-white;
+  
+  #submit-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: a.$main-color;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  #submit-btn:active {
+    background: rgba(250, 250, 250, 0.6); // based on $main-white
     color: a.$dark-grey;
-    transition: all .3s ease-in-out;
-}
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+  

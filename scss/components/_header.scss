@@ -1,3 +1,5 @@
+@use '../abstracts/' as a;
+
 #header-logo {
     height: 100px;
 }
@@ -8,33 +10,93 @@
     align-items: center;
 }
 
+.socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socials i {
+    font-size: 24px;
+    color: a.$main-bg;
+}
+
+
 
 #burger {
     height: 40px;
     width: 40px;
 }
 
+.main-nav {
+    position: fixed;
+    top: 10px; // same as your original margin-top
+    right: 15px;
+    margin: 0 auto;
+    max-width: 60%; // or a fixed width if needed
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.15); // semi-transparent
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3); // light border
+    backdrop-filter: blur(5px); // frosted glass effect
+    -webkit-backdrop-filter: blur(5px); // Safari support
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    height: 40px;
+    margin-top: 20px;
+    display: flex;
+    transition: transform .7s ease, opacity 0.3s ease;
+  }
+
+  .nav-hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
 .main-nav-ul {
-    display: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0px;
 }
+
+.main-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.main-nav-ul li a {
+    color: a.$main-bg; // your main color
+    text-decoration: none;
+    padding: 10px 5px;
+    font-weight: 500;
+    transition: all .3s ease-in-out;  
+  
+    &:hover {
+      color: lighten(a.$main-color, 20%);
+      transition: all .3s ease-in-out;  
+    }
+  }
 
 #header-mobile a {
     height: 300%;
 }
 
 @media screen and (min-width: 768px){
-    .main-nav-ul {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
+
 
     .main-nav {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+        position: fixed;
+        top: 10px; // same as your original margin-top
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        max-width: 40%; // or a fixed width if needed
+        margin-top: 20px;
+      }
 
     #burger {
         display: none;
@@ -42,5 +104,7 @@
 }
 
 @media screen and (min-width: 1200px) {
-
+    .main-nav {
+        max-width: 25%;
+    }
 }

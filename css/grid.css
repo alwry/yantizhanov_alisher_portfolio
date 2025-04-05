@@ -129,7 +129,7 @@ img, embed, object, video, picture {
         grid-column-gap: 30px;
         padding-left: 15px;
         padding-right: 15px;
-        max-width: 1200px;
+        max-width: 1500px;
      }
   
      .l-col-auto {grid-column: auto;}

@@ -1,12 +1,20 @@
 (() => {
 
-const burgerIcon = document.querySelector('#burger-div');
-const mobileNav = document.querySelector('.mobile-nav');
-
-function toggleNav() {
-    mobileNav.classList.toggle('hidden')
-};
-
-burgerIcon.addEventListener('click', toggleNav);
+    let lastScrollY = window.scrollY;
+    const nav = document.querySelector('.main-nav');
+    
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+    
+      if (currentScrollY > lastScrollY) {
+        // Scrolling down
+        nav.classList.add('nav-hidden');
+      } else {
+        // Scrolling up
+        nav.classList.remove('nav-hidden');
+      }
+    
+      lastScrollY = currentScrollY;
+    });
 
 })();
