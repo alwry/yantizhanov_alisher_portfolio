@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -15,50 +14,60 @@
         <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
         <link rel="manifest" href="img/site.webmanifest">
-        <title>Contact</title>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"/>
+        <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+        <script defer src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
+
+        <script defer src="js/lenis.js"></script>
+        <script defer src="js/ball.js"></script>
+        <script defer src="js/SplitText.js"></script>
+        <script defer src="js/main.js"></script>
+        <script defer src="js/burger.js"></script>
+        <title>Contact Me!</title>
     </head>
     <body>
         <header>
-        <div class="grid-con" id="header-mobile">
+            <div class="grid-con">
                 <div class="col-span-1">
                     <object data="img/logo-portfolio-02.svg" type="image/svg+xml" id="header-logo"></object>
                 </div>
-                <div class="col-span-1 col-start-4" id="burger-div">
-                    <object data="img/list.svg" type="image/svg+xml" id="burger"></object>
-                </div>
-                <nav class="main-nav t-col-start-5 t-col-span-3 l-col-start-10 l-col-end-13">
+                <nav class="main-nav">
                     <ul class="main-nav-ul">
                         <li><a href="index.php">Home</a></li>
                         <li><a href="about.php">About</a></li>
                         <li><a href="contact.php">Contact</a></li>
                     </ul>
                 </nav>
-                <nav class="mobile-nav col-span-full hidden">
-                    <ul class="mobile-nav-ul">
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="about.php">About</a></li>
-                        <li><a href="contact.php">Contact</a></li>
-                    </ul>
-                </nav>
+                <div class="socials mobile-hidden t-col-start-6 t-col-end-7 l-col-start-12 l-col-end-13">
+                    <a href="https://linkedin.com/in/alisher-y" target="_blank" rel="noopener noreferrer" class="mobile-hidden">
+                        <i class="ph-fill ph-linkedin-logo"></i>
+                      </a>
+                      <a href="https://instagram.com/alish.des" target="_blank" rel="noopener noreferrer" class="mobile-hidden">
+                        <i class="ph-fill ph-instagram-logo"></i>
+                      </a>
+                      <a href="https://www.behance.net/alishdesigncom" target="_blank" rel="noopener noreferrer" class="mobile-hidden">
+                        <i class="ph-fill ph-behance-logo"></i>
+                      </a>
+                </div>
             </div>
         </header>
         <main>
+            <div class="ball"></div>
             <section class="about">
                 <div class="grid-con">
                     <h2 class="page-h2 col-span-3 t-col-span-4 l-col-span-6">
                         Contact
                     </h2>
-                    <div class="col-span-1 t-col-start-6 t-col-span-1 l-col-start-8 heading-icon" id="icon-contact">
-                        <object data="img/arrow.svg" type="image/svg+xml"></object>
-                    </div>
                 </div>
             </section>
 
             <section class="form-con">
                 <div class="grid-con">
-                    <p class="main-p col-span-full t-col-span-3 l-col-start-1 l-col-span-4 main-p-anim">Lets create something amazing together! Whether youre looking for a fresh perspective, need help with a project, or just want to connect, Im here to help. Feel free to reach out—Id love to hear from you!</p>
-                    <form method="post" action="sendmail.php" class="contact-form col-span-full t-col-span-5 l-col-start-8">
-                        <div class="form-heading">
+                    <p class="main-p col-span-full t-col-span-3 l-col-start-1 l-col-span-4 main-p-anim">Let’s create something amazing together! Whether you’re looking for a fresh perspective, need help with a project, or just want to connect, I’m here to help. Feel free to reach out—I’d love to hear from you!</p>
+                    <form method="post" action="sendmail.php" class="col-span-full t-col-span-5 l-col-start-8">
+                        <div class="form-heading col-span-full t-col-span-5 l-col-start-8">
                             <h3 class="form-heading-h3">
                                 Project Details
                             </h3> 
@@ -74,7 +83,7 @@
                             <object data="img/arrow.svg" type="image/svg+xml"></object>
                         </div>
                         <input type="text" name="name" id="name" class="input" placeholder="Your name">
-                        <input type="email" name="email" id="email" class="input" placeholder="Your email">
+                        <input type="text" name="email" id="email" class="input" placeholder="Your email">
                         <input type="text" name="brief" id="brief" class="input" placeholder="Tell me about this project">
                         <input type="submit" name="sumbit" id="submit-btn" value="Submit!">
                     </form>
@@ -89,30 +98,24 @@
                     <li><a href="about.php">About</a></li>
                     <li><a href="contact.php">Contact</a></li>
                 </ul>
+
                 <object data="img/logo-portfolio-02.svg" type="image/svg+xml" class="footer-log col-start-4 col-span-2 t-col-start-6 t-col-span-3 l-col-start-11 l-col-end-13"></object>
-                <p class="descriptor col-span-full">
-                    Alisher Yantizhanov 2024. All rights reserved
+                <p class="descriptor col-span-full t-col-start-1 t-col-end-4">
+                    &#169; Alisher Yantizhanov 2025. All rights reserved
                 </p>
+                <div class="socials t-col-start-6 t-col-end-7 l-col-start-12 l-col-end-13">
+                    <a href="https://linkedin.com/in/alisher-y" target="_blank" rel="noopener noreferrer">
+                        <i class="ph-fill ph-linkedin-logo"></i>
+                      </a>
+                      <a href="https://instagram.com/alish.des" target="_blank" rel="noopener noreferrer">
+                        <i class="ph-fill ph-instagram-logo"></i>
+                      </a>
+                      <a href="https://www.behance.net/alishdesigncom" target="_blank" rel="noopener noreferrer">
+                        <i class="ph-fill ph-behance-logo"></i>
+                      </a>
+                </div>
             </div>
         </footer>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/bundled/lenis.min.js"></script>
-    <script>
-        const lenis = new Lenis()
-
-        function raf(time) {
-            lenis.raf(time)
-            requestAnimationFrame(raf)
-        }
-
-        requestAnimationFrame(raf)
-        
-    </script>
-    <script src="js/SplitText.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/burger.js"></script>
     </body>
     
 </html>
